@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         //PrimarySwatch: color.orange,
       ),
-      home: const MyHomePage(title: 'Mon App1'),
+      home: const MyHomePage(title: 'Mon App2'),
     );
   }
 }
@@ -33,8 +33,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 1;
-
+  int _counter = 0;
   void _incrementCounter() {
     setState(() {
       _counter++;
