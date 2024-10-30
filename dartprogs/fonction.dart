@@ -12,10 +12,14 @@ void optionalParameter() {
   // fparametreOptionnels("Bamba mboup", 24);
   // fparametreOptionnels("Ahmadou");
   // fparametreOptionnels(12); error
-  fparametreNommer(nom: 'Bamba');
-  fparametreNommer(salutation: 'comment allez vous');
-  fparametreNommer(nom: 'Ahmadou bamba', salutation: 'Bonsoir');
-  fparametreNommer(salutation: 'bonsoir', nom: 'Khadim'); //l'ordre import peu
+  // fparametreNommer(nom: 'Bamba');
+  // fparametreNommer(salutation: 'comment allez vous');
+  // fparametreNommer(nom: 'Ahmadou bamba', salutation: 'Bonsoir');
+  // fparametreNommer(salutation: 'bonsoir', nom: 'Khadim'); //l'ordre import peu
+  // fparametreNommer();
+  print(suitArithm(7, pos: 2));
+  print(suitArithm(7, pos: 2, uo: 1));
+  print(suitArithm(4));
 }
 
 void fonctionClassique() {
@@ -50,4 +54,11 @@ void fparametreNommer({String? nom, String? salutation}) {
   final sonNom = nom ?? 'personne mystere';
   final hi = salutation ?? 'Bonjour';
   print('$hi ,$sonNom.');
+}
+
+int suitArithm(int n, {int pos = 1, int uo = 1}) {
+  if (n == 0)
+    return uo;
+  else
+    return n + suitArithm(pos: pos, n - 1, uo: uo);
 }
